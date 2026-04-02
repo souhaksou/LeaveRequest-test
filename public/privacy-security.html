@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy &amp; Security Policy — Leave Management System</title>
+  <style>
+    body { font-family: sans-serif; max-width: 760px; margin: 40px auto; padding: 0 20px; line-height: 1.7; }
+    h1 { color: #1976d2; }
+    h2 { margin-top: 2em; }
+  </style>
+</head>
+<body>
+  <h1>Privacy &amp; Security Policy</h1>
+  <p><em>Last updated: 2026-01-01</em></p>
+
+  <h2>Data Storage</h2>
+  <p>
+    All leave request data is stored exclusively in your browser's <code>localStorage</code> under
+    the key <code>leave-requests-v1</code>. No data is transmitted to any server. Clearing browser
+    storage will permanently remove all records.
+  </p>
+
+  <h2>Data We Collect</h2>
+  <p>
+    This application does not collect, transmit, or share any personal data. Everything runs
+    client-side in your browser.
+  </p>
+
+  <h2>CSV Import / Export</h2>
+  <p>
+    CSV files are processed entirely in-browser. Exported values are hardened against formula
+    injection attacks. Imported files are validated and limited to 2 MB.
+  </p>
+
+  <h2>PDF Export</h2>
+  <p>
+    PDF generation happens in-browser using jsPDF. The generated file is downloaded directly to
+    your device without being uploaded anywhere.
+  </p>
+
+  <h2>Security</h2>
+  <ul>
+    <li>No external API calls are made.</li>
+    <li>Seeded demo data uses Faker and does not represent real individuals.</li>
+    <li>Exported CSVs are sanitised against formula-injection characters.</li>
+    <li>Static assets are served with long-cache headers; HTML pages require revalidation.</li>
+  </ul>
+
+  <h2>Contact</h2>
+  <p>For questions, please open an issue on the project repository.</p>
+</body>
+</html>
