@@ -4,7 +4,6 @@ import { USERS, LEAVE_TYPES } from './constants'
 import { calcBusinessDays, toISODateString } from './date'
 import { loadRequests, saveRequests } from './storage'
 
-const STATUSES: LeaveStatus[] = ['Submitted', 'Approved', 'Rejected', 'Cancelled']
 
 function randomDate(start: Date, end: Date): Date {
   return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()))
