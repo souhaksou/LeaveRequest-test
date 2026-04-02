@@ -49,10 +49,10 @@ describe('calcBusinessDays', () => {
   })
 
   it('uses COMPANY_HOLIDAYS by default when no holidays arg provided', () => {
-    // 2024-12-25 is in COMPANY_HOLIDAYS; it's a Wednesday
-    // 2024-12-23 (Mon) to 2024-12-27 (Fri) should have 4 business days (Wed excluded)
+    // 2024-12-25 (Wed) and 2024-12-26 (Thu) are both in COMPANY_HOLIDAYS
+    // 2024-12-23 (Mon) to 2024-12-27 (Fri) = 3 business days (Wed + Thu excluded)
     const result = calcBusinessDays('2024-12-23', '2024-12-27')
-    expect(result).toBe(4)
+    expect(result).toBe(3)
   })
 })
 
